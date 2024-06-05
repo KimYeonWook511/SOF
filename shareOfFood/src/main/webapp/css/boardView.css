@@ -1,0 +1,256 @@
+@charset "UTF-8";
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	grid-auto-rows: minmax(500px, auto);
+	grid-gap: 15px;
+	grid-template-areas: 'column-main column-side';
+}
+
+.column-main {
+	grid-area: column-main;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 800px 1fr;
+	grid-template-rows: 130px auto 1fr;
+	grid-gap: 10px;
+	grid-template-areas: '. restaurant-title .' '. restaurant-info .'
+		'. restaurant-review .';
+}
+
+.column-side {
+	grid-area: column-side;
+}
+
+.restaurant-title {
+	grid-area: restaurant-title;
+	display: grid;
+	grid-template-rows: 20px 67px 37px;
+	grid-gap: 3px;
+	grid-template-areas: '.' 'restaurant-name' 'restaurant-status';
+}
+
+.restaurant-name {
+	grid-area: restaurant-name;
+	vertical-align: middle;
+	text-align: left;
+	font-size: 40px;
+}
+
+.restaurant-status {
+	grid-area: restaurant-status;
+}
+
+.restaurant-info {
+	grid-area: restaurant-info;
+	margin-top: 20px;
+}
+
+.restaurant-review {
+	grid-area: restaurant-review;
+	display: grid;
+	grid-template-rows: 100px 1fr;
+	grid-template-areas: 'review-header' 'review-main';
+}
+
+.review-header {
+	grid-area: review-header;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.review-main {
+	grid-area: review-main;
+}
+
+.review-data {
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	grid-template-areas: 'review-writer review-info';
+}
+
+.review-writer {
+	grid-area: review-writer;
+	text-align: center;
+	font-weight: bold;
+	display: table;
+}
+
+.review-writer-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.review-info {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	grid-area: review-info;
+	display: grid;
+	grid-template-rows: 30px 1fr;
+	grid-template-areas: 'review-t-d' 'review-content';
+}
+
+.review-content {
+	grid-area: review-content;
+	font-weight: bold;
+}
+
+.review-t-d {
+	grid-area: review-t-d;
+	display: grid;
+	grid-template-columns: 1fr 100px;
+	grid-template-areas: 'review-title review-date';
+}
+
+.review-imgMain {
+	height: 100px;
+}
+
+.review-img {
+	display: table-cell; 
+	text-align: center; 
+	vertical-align: middle;
+}
+
+.review-date {
+	grid-area: review-date;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(79, 79, 79, 0.6);
+}
+
+.review-title {
+	grid-area: review-title;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.info-table {
+	padding: 20px 0;
+}
+
+.rest_imgtag {
+	margin-left: 0px;
+}
+
+.rest_notimg {
+	background: #D5D5D5;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.rest_notimg_inner {
+	color: rgba(79, 79, 79, 0.6);
+	font-size: 40px;
+}
+
+.rest_info_th {
+	width: 110px;
+	color: rgba(79, 79, 79, 0.6);
+	line-height: 1.7;
+	text-align: left;
+	vertical-align: top;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+
+td {
+	color: #4f4f4f;
+	line-height: 1.7;
+	text-align: left;
+	vertical-align: middle;
+	padding-bottom: 5px;
+}
+
+.popup {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 5;
+	transform: translate(-50%, -50%);
+	width: 1000px;
+	height: 700px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	border-radius: 5px; /* 모서리 둥글게 */
+	background: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+	opacity: 0; /* opacity는 사실 투명하게만 만든거지 존재하긴 함 */
+	transition: all 0.5s;
+}
+
+.popup:target {
+	opacity: 1;
+}
+
+.popup:target+.dim {
+	opacity: 1;
+	z-index: 2;
+}
+
+.popup a {
+	color: grey;
+	text-decoration: none;
+}
+
+.dim {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: -1; /* body 밖으로 빠지게 됨 */
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.popup-main {
+	display: grid;
+	grid-template-rows: 30px 50px 400px 170px;
+	grid-template-areas: 'popup-head' 'popup-title' 'popup-content'
+		'popup-picture';
+}
+
+.popup-head {
+	grid-area: popup-head;
+	display: grid;
+	grid-template-columns: 480px 480px;
+	grid-template-areas: 'popup-writer popup-cancel';
+}
+
+.popup-writer {
+	grid-area: popup-writer;
+}
+
+.popup-cancel {
+	grid-area: popup-cancel;
+	text-align: right;
+}
+
+.popup-title {
+	grid-area: popup-title;
+}
+
+.popup-content {
+	grid-area: popup-content;
+/* 	white-space: pre-wrap; */
+}
+
+.popup-picture {
+	grid-area: popup-picture;
+	background: grey;
+}
+
+.review-data:hover {
+	/* #을 붙이면 16진수(0~F) 0~15 : 16단계 16 * 16 * 16 가지 색상을 나타냄
+		rgb 6자리(0~255) 0~255 : 256단계 256 * 256 * 256 가지 색상을 나타냄 */
+	background: #ddd;
+	cursor: pointer;
+}

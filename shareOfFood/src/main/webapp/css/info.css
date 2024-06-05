@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.navbar {
+	margin-bottom: 0px;
+}
+.main {
+	display: grid;
+	grid-template-columns: 1fr 400px;	
+/* 	grid-template-rows: 100%; */
+	grid-auto-rows: minmax(500px, auto);
+	grid-gap: 15px;
+/* 	height: 100vh; */
+	grid-template-areas: 'column-main column-side';
+}
+
+.column-main {
+	grid-area: column-main;
+	background-color: skyblue;
+	display: grid;
+	grid-template-columns: 1fr 800px 1fr;
+	grid-template-rows: 130px 400px 150px;
+	grid-auto-rows: minmax(500px, auto);
+	grid-gap: 10px;
+	grid-template-areas: '. restaurant-title .'
+						 '. restaurant-info .'
+						 '. restaurant-review .';
+}
+
+.column-side {
+	grid-area: column-side;
+	background-color: #ddd;
+}
+
+.restaurant-title {
+	grid-area: restaurant-title;
+	background-color: #aca;
+	display: grid;
+	grid-template-rows: 20px 67px 37px;
+	grid-gap: 3px;
+	grid-template-areas: '.'
+						 'restaurant-name'
+						 'restaurant-status';
+}
+
+.restaurant-name {
+	grid-area: restaurant-name;
+	background-color: #acf;
+}
+
+.restaurant-status {
+	grid-area: restaurant-status;
+	background-color: #acf;
+}
+
+.restaurant-info {
+	grid-area: restaurant-info;
+	background-color: #aca;
+}
+
+.restaurant-review {
+	grid-area: restaurant-review;
+	background-color: #aca;
+}
+
+.info-table {
+	padding: 20px 0;
+}
+
+th {
+	width: 110px;
+    color: rgba(79,79,79,0.6);
+    line-height: 1.7;
+    text-align: left;
+    vertical-align: top;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+td {
+    color: #4f4f4f;
+    line-height: 1.7;
+    text-align: left;
+    vertical-align: middle;
+    padding-bottom: 5px;
+}

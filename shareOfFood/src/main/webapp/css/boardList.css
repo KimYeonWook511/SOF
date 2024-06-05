@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+.board-list {
+	display: grid;
+	grid-template-rows: 100px 1fr;
+	grid-template-areas: 'board-header' 'board-main';
+}
+
+.board-header {
+	grid-area: board-header;
+	font-size: 30px;
+	font-weight: bold;
+	color: #747474;
+	display: table;
+}
+
+.board-header > div {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.board-main {
+	grid-area: board-main;
+}
+
+.board-data {
+	display: grid;
+	grid-template-columns: 150px 1fr 100px 100px;
+	grid-template-areas: 'board-writer board-info board-viewCount board-date';
+}
+
+.board-writer {
+	grid-area: board-writer;
+	text-align: center;
+	font-weight: bold;
+	display: table;
+}
+
+.board-writer-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.board-info {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	grid-area: board-info;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-areas: 'board-title' 'board-img-list';
+}
+
+.board-img-list {
+	grid-area: board-img-list;
+	font-weight: bold;
+}
+
+.board-imgMain {
+	height: 100px;
+}
+
+.board-img {
+	display: table-cell; 
+	text-align: center; 
+	vertical-align: middle;
+}
+
+.board-title {
+	grid-area: board-title;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.board-viewCount {
+	grid-area: board-viewCount;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(79, 79, 79, 0.6);
+	margin-top: 15px;
+}
+
+.board-date {
+	grid-area: board-date;
+	text-align: center;
+	font-weight: bold;
+	color: rgba(79, 79, 79, 0.6);
+	margin-top: 15px;
+}
+
+.board-data:hover {
+	/* #을 붙이면 16진수(0~F) 0~15 : 16단계 16 * 16 * 16 가지 색상을 나타냄
+		rgb 6자리(0~255) 0~255 : 256단계 256 * 256 * 256 가지 색상을 나타냄 */
+	background: #ddd;
+	cursor: pointer;
+}
+
+.lowArea {
+	display: grid;
+	grid-template-columns: 100px 500px 60px 1fr;
+	grid-template-areas: 'searchSelect search_board searchImg boardBtn';
+}
+
+.searchImg {
+	background-image: url("/css/img/search.png");
+	background-size: cover;
+	background-position: center;
+	width: 60px;
+	height: 34px;
+}
+
+.searchImg:hover {
+	cursor: pointer;
+}
+
+.searchSelect {
+	width: 100px;
+	height: 34px;
+}
+
+.search_board {
+	width: 500px;
+	height: 34px;
+}
+
+td {
+	color: #4f4f4f;
+	line-height: 1.7;
+	text-align: left;
+	vertical-align: middle;
+	padding-bottom: 5px;
+}

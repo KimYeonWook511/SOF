@@ -1,0 +1,226 @@
+@charset "UTF-8";
+
+.container {
+	width: 1500px;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-areas: 'hotBoardArea' 'newRestArea' 'hotRestArea';
+}
+
+.background {
+	background: black;
+}
+
+.hotBoardArea {
+	grid-area: hotBoardArea;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.hotBoardHeader {
+	font-size: 30px;
+	font-weight: bold;
+	color: #747474;
+}
+
+.hotBoardList {
+	text-align: center;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 250px 250px;
+	grid-template-areas: 'hotBoard1 hotBoard2 hotBoard3' 'hotBoard4 hotBoard5 hotBoard6';
+}
+
+.hotBoard1:hover {
+	grid-area: hotBoard1;
+	cursor: pointer;
+}
+
+.hotBoard2:hover {
+	grid-area: hotBoard2;
+	cursor: pointer;
+}
+
+.hotBoard3:hover {
+	grid-area: hotBoard3;
+	cursor: pointer;
+}
+
+.hotBoard4:hover {
+	grid-area: hotBoard4;
+	cursor: pointer;
+}
+
+.hotBoard5:hover {
+	grid-area: hotBoard5;
+	cursor: pointer;
+}
+
+.hotBoard6:hover {
+	grid-area: hotBoard6;
+	cursor: pointer;
+}
+
+.hotBoardTitle {
+	height: 30px;
+	z-index: 4;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	width: 80%;
+}
+
+.hotBoardTitle-inner {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 25px;
+	font-weight: bold;
+	color: #F6F6F6;
+	text-align: center;
+}
+
+.newRestArea {
+	grid-area: newRestArea;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.newRestHeader {
+	font-size: 30px;
+	font-weight: bold;
+	color: #747474;
+}
+
+.newRestList {
+	text-align: center;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 250px 250px;
+	grid-template-areas: 'newRest1 newRest2 newRest3' 'newRest4 newRest5 newRest6';
+}
+
+.newRest1:hover {
+	grid-area: newRest1;
+	cursor: pointer;
+}
+
+.newRest2:hover {
+	grid-area: newRest2;
+	cursor: pointer;
+}
+
+.newRest3:hover {
+	grid-area: newRest3;
+	cursor: pointer;
+}
+
+.newRest4:hover {
+	grid-area: newRest4;
+	cursor: pointer;
+}
+
+.newRest5:hover {
+	grid-area: newRest5;
+	cursor: pointer;
+}
+
+.newRest6:hover {
+	grid-area: newRest6;
+	cursor: pointer;
+}
+
+.newRestTitle {
+	height: 30px;
+	z-index: 4;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	width: 80%;
+}
+
+.newRestTitle-inner {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 25px;
+	font-weight: bold;
+	color: #F6F6F6;
+	text-align: center;
+}
+
+.hotRestArea {
+	grid-area: hotRestArea;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.hotRestHeader {
+	font-size: 30px;
+	font-weight: bold;
+	color: #747474;
+}
+
+.hotRestList {
+	text-align: center;
+	display: grid;
+	grid-gap: 15px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 250px 250px;
+	grid-template-areas: 'hotRest1 hotRest2 hotRest3' 'hotRest4 hotRest5 hotRest6';
+}
+
+.hotRest1:hover {
+	grid-area: hotRest1;
+	cursor: pointer;
+}
+
+.hotRest2:hover {
+	grid-area: hotRest2;
+	cursor: pointer;
+}
+
+.hotRest3:hover {
+	grid-area: hotRest3;
+	cursor: pointer;
+}
+
+.hotRest4:hover {
+	grid-area: hotRest4;
+	cursor: pointer;
+}
+
+.hotRest5:hover {
+	grid-area: hotRest5;
+	cursor: pointer;
+}
+
+.hotRest6:hover {
+	grid-area: hotRest6;
+	cursor: pointer;
+}
+
+.hotRestTitle {
+	height: 30px;
+	z-index: 4;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	width: 80%;
+}
+
+.hotRestTitle-inner {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 25px;
+	font-weight: bold;
+	color: #F6F6F6;
+	text-align: center;
+}
+
+img {
+	opacity: 0.7;
+}

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/* navbar css --------------------------------------------------*/
+.search_btn {
+	background-image: url("/css/img/search.png");
+	width: 32px;
+	height: 33px;
+	background-size: cover;
+	margin-top: 10px;
+	margin-left: 15px;
+}
+
+.search_input {
+	margin-left: 40px;
+	width: 500px;
+	height: 33px;
+}
+/* ------------------------------------------------------------ */

@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 1fr 400px;
+	grid-auto-rows: minmax(500px, auto);
+	grid-gap: 15px;
+	grid-template-areas: 'column-main column-side';
+}
+
+.column-main {
+	grid-area: column-main;
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 800px 1fr;
+	grid-template-rows: 130px auto;
+	grid-gap: 10px;
+	grid-template-areas: '. board-title .' '. board-info .';
+}
+
+.column-side {
+	grid-area: column-side;
+}
+
+.board-title {
+	grid-area: board-title;
+	display: grid;
+	grid-template-rows: 20px auto 37px;
+	grid-gap: 3px;
+	grid-template-areas: '.' 'board-name' 'board-status';
+}
+
+.board-name {
+	grid-area: board-name;
+	vertical-align: middle;
+	text-align: left;
+	font-size: 40px;
+}
+
+.board-status {
+	grid-area: board-status;
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	grid-template-rows: auto 1px;
+	grid-template-areas: 'status-viewCount status-write' 'hr-bar hr-bar';
+}
+
+.status-viewCount {
+	grid-area: status-viewCount;
+	margin-left: 2px;
+	margin-right: 10px;
+	color: #747474;
+	font-weight: bold;
+}
+
+.status-write {
+	grid-area: status-write;
+	justify-content: end;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-areas: '. status-writer status-writeDate';
+}
+
+.status-writer {
+	grid-area: status-writer;
+	margin-left: 2px;
+	margin-right: 10px;
+	color: #747474;
+	font-weight: bold;
+}
+
+.status-writeDate {
+	grid-area: status-writeDate;
+	margin-left: 2px;
+	margin-right: 10px;
+	color: #747474;
+	font-weight: bold;
+}
+
+.hr-bar {
+	grid-area: hr-bar;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 100%;
+}
+
+.board-info {
+	grid-area: board-info;
+	margin-top: 20px;
+}
+
+.info-table {
+	padding: 20px 0;
+}
+
+.board_imgtag {
+	margin-left: 0px;
+}
+
+.board_notimg {
+	background: #D5D5D5;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.board_notimg_inner {
+	color: rgba(79, 79, 79, 0.6);
+	font-size: 40px;
+}
+
+.board_info_th {
+	width: 110px;
+	color: rgba(79, 79, 79, 0.6);
+	line-height: 1.7;
+	text-align: left;
+	vertical-align: top;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+
+td {
+	color: #4f4f4f;
+	line-height: 1.7;
+	text-align: left;
+	vertical-align: middle;
+	padding-bottom: 5px;
+}
+
+.review-data:hover {
+	/* #을 붙이면 16진수(0~F) 0~15 : 16단계 16 * 16 * 16 가지 색상을 나타냄
+		rgb 6자리(0~255) 0~255 : 256단계 256 * 256 * 256 가지 색상을 나타냄 */
+	background: #ddd;
+	cursor: pointer;
+}
